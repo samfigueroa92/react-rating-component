@@ -3,11 +3,14 @@ body{
   font-family: 'Overpass', sans-serif;
 }
 
+/* Front */
+
 .Front{
   width: 50vh;
   height: 50vh;
   margin: 0 auto;
   margin-top: 100px;
+  padding: 5px;
   border-radius: 25px;
   background-color: hsl(213, 19%, 18%);
 }
@@ -17,7 +20,7 @@ body{
   height: 50px;
   margin: 15px;
   border-radius: 50%;
-  background-color: hsl(216, 12%, 54%);
+  background-color: hsl(213, 17%, 21%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,12 +47,17 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(216, 12%, 54%);
-  /* opacity: 0.3; */
+  background-color: hsl(213, 17%, 21%);
   color: hsl(217, 12%, 63%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  border: none;
+}
+
+.number:hover{
+  background-color: hsl(25, 97%, 53%);
+  color: black;
 }
 
 .Front_submit{
@@ -66,4 +74,42 @@ body{
   font-size: 15px;
   font-weight: 700;
   letter-spacing: .2em;
+}
+
+/* Back */
+.Back{
+  width: 50vh;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: hsl(213, 19%, 18%);
+}
+
+.Back_img{
+  margin-top: 50px;
+}
+
+.Back_banner{
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 17%, 21%);
+  width: 250px;
+  text-align: center;
+  font-weight: 700;
+  padding: 2px;
+  border-radius: 25px;
+  margin-top: 25px
+
+}
+
+.Back_text{
+  color:hsl(0, 0%, 100%);
+  margin: 25px;
+  text-align: center;
+  line-height: 1.5em;
 }

@@ -1,6 +1,18 @@
 import star from "../src/icon-star.svg";
 
-const Front = () => {
+
+const Front = ({setToggle, setRating}) => {
+
+  const handleRating = (e) => {
+    const { value } = e.target;
+    setRating(value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setToggle(true)
+  }
+  
   return (
     <div className="Front">
       <div className="Front_star">
@@ -17,15 +29,17 @@ const Front = () => {
           </span>
         </p>
       </div>
-      <div className="Front_numbers">
-        <div className="number one">1</div>
-        <div className="number two">2</div>
-        <div className="number three">3</div>
-        <div className="number four">4</div>
-        <div className="number five">5</div>
+      <div>
+      <form className="Front_numbers">
+        <input type="button" className="number" value="1" onClick={handleRating}></input>
+        <input type="button" className="number" value="2" onClick={handleRating}></input>
+        <input type="button" className="number" value="3" onClick={handleRating}></input>
+        <input type="button" className="number" value="4" onClick={handleRating}></input>
+        <input type="button" className="number" value="5" onClick={handleRating}></input>
+      </form>
       </div>
       <div className="Front_submit">
-      <input type="submit" />
+      <input type="submit" onClick={handleSubmit} />
       </div>
     </div>
   );
